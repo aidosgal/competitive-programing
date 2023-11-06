@@ -30,18 +30,10 @@ using namespace std;
 #define vll vector<long long>
 
 void solve() {
-    
+    // Your code here
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
 
     int t = 1;
     // cin >> t; // Uncomment this line if there is a test case count

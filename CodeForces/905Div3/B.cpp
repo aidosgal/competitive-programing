@@ -30,7 +30,23 @@ using namespace std;
 #define vll vector<long long>
 
 void solve() {
-    
+    int n, k; cin >> n >> k;
+    string s; cin >> s;
+    unordered_map<char, int> c;
+    for(char x : s){
+        c[x]++;
+    }
+    int od = 0;
+    for(const auto &pair : c){
+        if(pair.second % 2 != 0){
+            ++od;
+        }
+    }
+    if(od > k + 1){
+        cout << "NO" << endl;
+    }else{
+        cout << "YES" << endl;
+    }
 }
 
 int main() {
@@ -44,7 +60,7 @@ int main() {
     #endif
 
     int t = 1;
-    // cin >> t; // Uncomment this line if there is a test case count
+    cin >> t; // Uncomment this line if there is a test case count
     while (t--) {
         solve();
     }

@@ -30,7 +30,7 @@ using namespace std;
 #define vll vector<long long>
 
 void solve() {
-    
+    int n;
 }
 
 int main() {
@@ -44,7 +44,7 @@ int main() {
     #endif
 
     int t = 1;
-    // cin >> t; // Uncomment this line if there is a test case count
+    cin >> t; // Uncomment this line if there is a test case count
     while (t--) {
         solve();
     }

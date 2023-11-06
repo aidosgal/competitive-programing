@@ -30,18 +30,33 @@ using namespace std;
 #define vll vector<long long>
 
 void solve() {
-    
+    int n; cin >> n;
+    vector<int> a;
+    if(n == 1){
+      cout << 1;
+    }else if( n == 4){
+      cout << 2 << " " << 4 << " " << 1 << " " << 3;
+    }
+    else if(n <= 3){
+      cout << "NO SOLUTION";
+    }else{
+      for(int i = n; i > 0; i--){
+        if(i % 2 == 0){
+          a.push_back(i);
+        }
+      }
+      for(int i = n; i > 0; i--){
+        if(i % 2 == 1){
+          a.push_back(i);
+        }
+      }
+      for(auto x : a){
+        cout << x << " ";
+      }
+    }
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
 
     int t = 1;
     // cin >> t; // Uncomment this line if there is a test case count

@@ -30,7 +30,26 @@ using namespace std;
 #define vll vector<long long>
 
 void solve() {
-    
+    int n; cin >> n;
+    int a[5];
+    a[0] = 1;
+    int c = 4;
+    int i = 1;
+    while(c > 0){
+        int p = pow(10, --c);
+        a[i] = n / p;
+        n %= p;
+        ++i;
+    }
+    int ans = 4;
+    int k;
+    for(int i = 1; i < 5; i++){
+        if(a[i] == 0){
+            a[i] = 10;   
+        }
+        ans = ans + abs(a[i] - a[i-1]);
+    }
+    cout << ans << endl;
 }
 
 int main() {
@@ -44,7 +63,7 @@ int main() {
     #endif
 
     int t = 1;
-    // cin >> t; // Uncomment this line if there is a test case count
+    cin >> t; // Uncomment this line if there is a test case count
     while (t--) {
         solve();
     }
